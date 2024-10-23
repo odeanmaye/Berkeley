@@ -1,8 +1,6 @@
 
 # 17.1 Readme
 
-![Marketing Campaign Analysis](img.png)
-
 ## Business Understanding of the Problem
 The data represents direct marketing campaigns of a Portuguese banking institution. The classification goal is to predict if the client will subscribe to a term deposit account offer during a phone call.
 
@@ -51,6 +49,8 @@ To clean and prepare this data, rows with null or "unknown" values were removed.
 Participants responded "no" to the offer 88.45% of the time. This baseline represents the accuracy of guessing "no" for every case. Any useful model should perform better than this.
 
 ## Classification Results
+Feature analysis overwhelmingly identified duration of the call as a strong predictor of the response. Statistical analysis confirms that the greater the last contact duration the higher the possibility of a yes response.
+![Marketing Campaign Analysis](img.png)
 
 ### Classification with Just the Duration Variable:
 
