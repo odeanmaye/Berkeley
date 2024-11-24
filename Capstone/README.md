@@ -73,6 +73,8 @@ The data for this project is sourced from:
 
 The project is organized into a single Jupyter notebook with clearly defined sections covering data collection, preprocessing, model training, and evaluation.
 
+- [Market Analysis Notebook](https://github.com/odeanmaye/Berkeley/blob/main/Capstone/MarketAnalysis.ipynb)
+
 ## Contact Information
 
 **Odean Maye**  
