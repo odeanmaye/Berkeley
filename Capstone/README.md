@@ -36,16 +36,33 @@ The data for this project is sourced from:
   - **Classifier**: MultinomialNB
   - **Best Parameters**: {'MultinomialNB__alpha': 0.5, 'MultinomialNB__fit_prior': True}
   - **Accuracy**: 70.4%
-  - **Classification Report**:
-    ```json
-    {
-      "0": {"precision": 0.67, "recall": 0.14, "f1-score": 0.24, "support": 14},
-      "1": {"precision": 0.50, "recall": 0.92, "f1-score": 0.65, "support": 13},
-      "accuracy": 0.52,
-      "macro avg": {"precision": 0.58, "recall": 0.53, "f1-score": 0.44, "support": 27},
-      "weighted avg": {"precision": 0.59, "recall": 0.52, "f1-score": 0.43, "support": 27}
-    }
-    ```
+- **Classification Report**
+
+  | Class | Precision | Recall | F1-Score | Support |
+  |-------|-----------|--------|----------|---------|
+  | **0** | 0.67      | 0.14   | 0.24     | 14      |
+  | **1** | 0.50      | 0.92   | 0.65     | 13      |
+
+  **Overall Metrics**:
+  - **Cross-Validation Accuracy**: 70.4%
+  - **Test Accuracy**: 52.0%
+  - **Macro Average**:
+    - **Precision**: 0.58
+    - **Recall**: 0.53
+    - **F1-Score**: 0.44
+  - **Weighted Average**:
+    - **Precision**: 0.59
+    - **Recall**: 0.52
+    - **F1-Score**: 0.43
+
+**Summary**:
+- The classifier struggles to identify instances of class `0` (negative trading days), as shown by the low recall (14%). However, it performs much better for class `1` (positive trading days), achieving a recall of 92%.
+- Precision for class `0` (67%) indicates that when the model predicts a negative trading day, it is relatively accurate. However, the low F1-score (24%) highlights poor balance between precision and recall.
+- The cross-validation accuracy during training was **70.4%**, indicating the model's potential to capture patterns in the data.
+- However, the test accuracy on a holdout dataset was **52%**, showing that the model's generalization ability is limited. This gap suggests the need for:
+  - More data to improve performance and reduce overfitting.
+  - Adjustments to address class imbalance, as class `0` had fewer correctly identified instances.
+  - Exploration of alternative algorithms or advanced techniques like ensemble methods or deep learning.
 
 ## Next Steps
 
@@ -60,12 +77,3 @@ The project is organized into a single Jupyter notebook with clearly defined sec
 
 **Odean Maye**  
 Email: odean@spectususa.com
-
-#### Outline of project
-
-- [Link to notebook 1]()
-- [Link to notebook 2]()
-- [Link to notebook 3]()
-
-
-##### Contact and Further Information
