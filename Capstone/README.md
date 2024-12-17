@@ -31,7 +31,8 @@ The data for this project is sourced from:
 
 - **Data Collection**: Data from June 2024 through October 2024 was collected, covering 105 trading sessions.
 - **Baseline**: A 58% baseline accuracy was established by always predicting a positive trading day (61 out of the 105 trading sessions in the time period were positive).
-- **Preprocessing**: ![Accuracy by Classifier](accuracy_by_classifier.png)
+- **Preprocessing**:
+![Accuracy by Classifier](accuracy_by_classifier.png)
 - **Best Model**: 
   - **Vectorizer**: TfidfVectorizer
   - **Classifier**: MultinomialNB
